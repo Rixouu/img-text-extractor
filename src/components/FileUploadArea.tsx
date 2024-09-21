@@ -51,7 +51,7 @@ export function FileUploadArea({ onFileUpload }: FileUploadAreaProps) {
       <div className="flex flex-col items-center">
         <Upload size={48} className="text-gray-400 dark:text-gray-500" aria-hidden="true" />
         <p className="mt-4 text-lg font-semibold text-black dark:text-white">Upload Picture, PDF or Drag & Drop</p>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">JPG, PNG, GIF, PDF up to 10MB</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">JPG, PNG, GIF up to 10MB</p>
       </div>
     </div>
   );

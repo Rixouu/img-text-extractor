@@ -189,7 +189,7 @@ export function ImageUploader() {
           <h1 className="text-3xl font-bold text-center text-white">Enhanced Image Text Extractor</h1>
           <ThemeToggle />
         </div>
-        <p className="text-center text-gray-300 mt-2">Upload an image to extract text. Supports JPG, PNG, and GIF formats.</p>
+        <p className="text-left text-gray-300 mt-2">Upload an image to extract text. Supports JPG, PNG, and GIF formats.</p>
       </div>
 
       <div className="p-6 flex-grow bg-white dark:bg-gray-900">
