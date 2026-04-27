@@ -182,15 +182,22 @@ export function ImageUploader() {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden flex flex-col" role="region" aria-label="Image Text Extractor">
-      <div className="p-8 pb-4">
-        <div className="flex justify-between items-center">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground">Image Text Extractor</h1>
+    <div className="bg-white rounded-[2.5rem] shadow-premium border border-border overflow-hidden flex flex-col p-8 md:p-12" role="region" aria-label="Image Text Extractor">
+      <div className="flex flex-col items-center mb-12 text-center">
+        <div className="w-24 h-24 bg-primary rounded-3xl flex items-center justify-center mb-8 shadow-xl shadow-primary/20 relative overflow-hidden p-4">
+          <Image
+            src="/icon-img-extractor.png"
+            alt="Icon"
+            width={80}
+            height={80}
+            className="object-contain"
+          />
         </div>
-        <p className="text-muted-foreground mt-2 text-lg">Upload an image to extract text effortlessly.</p>
+        <h1 className="text-4xl font-extrabold tracking-tight text-foreground mb-4">Image Text Extractor</h1>
+        <p className="text-muted-foreground text-lg max-w-md">Extract text from images effortlessly with our premium OCR tool.</p>
       </div>
 
-      <div className="p-8 pt-4 flex-grow bg-white">
+      <div className="flex-grow space-y-8">
         <FileUploadArea onFileUpload={handleImageUpload} />
 
         {file && renderFilePreview()}
@@ -224,12 +231,14 @@ export function ImageUploader() {
         </div>
       </div>
 
-      <ActionButtons
-        onClear={handleClear}
-        onCopy={handleCopy}
-        onDownload={handleDownload}
-        onExtract={handleExtractText}
-      />
+      <div className="mt-4">
+        <ActionButtons
+          onClear={handleClear}
+          onCopy={handleCopy}
+          onDownload={handleDownload}
+          onExtract={handleExtractText}
+        />
+      </div>
     </div>
   );
 }

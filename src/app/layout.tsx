@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: "ImgExtractor",
   },
   icons: {
+    icon: "/icon-img-extractor.png",
     apple: "/apple-icon-180.png",
   },
   formatDetection: {
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#FFC91E",
+  themeColor: "#FFCA1D",
 };
 
 export default function RootLayout({

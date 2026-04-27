@@ -4,8 +4,8 @@
   "description": "Extract text from images with ease using OCR technology.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFC91E",
-  "theme_color": "#FFC91E",
+  "background_color": "#FFCA1D",
+  "theme_color": "#FFCA1D",
   "icons": [
     {
       "src": "/manifest-icon-192.maskable.png",

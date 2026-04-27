@@ -3,37 +3,37 @@
 @plugin "tailwindcss-animate";
 
 @theme {
-  --color-background: oklch(1 0 0);
-  --color-foreground: oklch(0.129 0.042 264.695);
+  --color-background: oklch(0.985 0.001 106.423);
+  --color-foreground: oklch(0.145 0 0);
   
   --color-card: oklch(1 0 0);
-  --color-card-foreground: oklch(0.129 0.042 264.695);
+  --color-card-foreground: oklch(0.145 0 0);
 
   --color-popover: oklch(1 0 0);
-  --color-popover-foreground: oklch(0.129 0.042 264.695);
+  --color-popover-foreground: oklch(0.145 0 0);
 
-  --color-primary: oklch(0.672 0.207 43.125);
-  --color-primary-foreground: oklch(0.984 0.003 247.858);
+  --color-primary: #FFCA1D;
+  --color-primary-foreground: oklch(0.145 0 0);
 
-  --color-secondary: oklch(0.968 0.007 247.896);
-  --color-secondary-foreground: oklch(0.672 0.207 43.125);
+  --color-secondary: oklch(0.97 0 0);
+  --color-secondary-foreground: oklch(0.145 0 0);
 
-  --color-muted: oklch(0.968 0.007 247.896);
-  --color-muted-foreground: oklch(0.554 0.046 257.417);
+  --color-muted: oklch(0.97 0 0);
+  --color-muted-foreground: oklch(0.556 0 0);
 
-  --color-accent: oklch(0.968 0.007 247.896);
-  --color-accent-foreground: oklch(0.672 0.207 43.125);
+  --color-accent: oklch(0.97 0 0);
+  --color-accent-foreground: oklch(0.145 0 0);
 
   --color-destructive: oklch(0.577 0.245 27.325);
-  --color-destructive-foreground: oklch(0.984 0.003 247.858);
+  --color-destructive-foreground: oklch(0.985 0.001 106.423);
 
-  --color-border: oklch(0.929 0.013 255.508);
-  --color-input: oklch(0.929 0.013 255.508);
-  --color-ring: oklch(0.704 0.04 256.788);
+  --color-border: oklch(0.922 0 0);
+  --color-input: oklch(0.922 0 0);
+  --color-ring: oklch(0.871 0 0);
 
-  --radius-lg: 0.625rem;
-  --radius-md: calc(0.625rem - 2px);
-  --radius-sm: calc(0.625rem - 4px);
+  --radius-lg: 1.5rem;
+  --radius-md: calc(1.5rem - 2px);
+  --radius-sm: calc(1.5rem - 4px);
 }
 
 @layer base {
@@ -46,35 +46,6 @@
   }
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-.custom-toast-enter {
-  animation: slideIn 0.4s ease-out;
-  @apply p-4 mb-2 max-w-md w-full bg-white text-foreground rounded-lg shadow-xl border border-border;
-}
-
-.custom-toast-leave {
-  animation: fadeOut 0.3s ease-in forwards;
-}
-
-.custom-toast-enter:last-child {
-  @apply mb-0;
+.shadow-premium {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
 }

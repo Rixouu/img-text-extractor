@@ -3,12 +3,12 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-background p-4 md:p-8">
-      <main className="max-w-4xl mx-auto">
-        <ErrorBoundary fallback={<div className="text-foreground">Something went wrong</div>}>
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-12 lg:p-24 bg-background">
+      <div className="w-full max-w-3xl">
+        <ErrorBoundary fallback={<div className="text-foreground text-center">Something went wrong</div>}>
           <ClientPage />
         </ErrorBoundary>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
