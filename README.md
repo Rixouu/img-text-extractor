@@ -16,7 +16,7 @@ The current product was developed by [Jonathan Rycx](https://github.com/Rixouu),
 
 ### 🎨 Modern UI/UX
 - **Shadcn UI**: Premium, accessible components built on Radix UI.
-- **Next Themes**: Seamless light and dark mode support.
+- **Clean Design**: Minimalist, high-contrast light theme optimized for clarity.
 - **Responsive Design**: Optimized for desktop, tablet, and mobile browsers.
 - **Progressive Web App**: Installable on mobile and desktop for a native feel.
 

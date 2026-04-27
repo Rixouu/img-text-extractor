@@ -1,37 +1,39 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #000000;
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.129 0.042 264.695);
   
-  --color-card: #ffffff;
-  --color-card-foreground: #0f172a;
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.129 0.042 264.695);
 
-  --color-popover: #ffffff;
-  --color-popover-foreground: #0f172a;
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.129 0.042 264.695);
 
-  --color-primary: #0f172a;
-  --color-primary-foreground: #f8fafc;
+  --color-primary: oklch(0.672 0.207 43.125);
+  --color-primary-foreground: oklch(0.984 0.003 247.858);
 
-  --color-secondary: #f1f5f9;
-  --color-secondary-foreground: #0f172a;
+  --color-secondary: oklch(0.968 0.007 247.896);
+  --color-secondary-foreground: oklch(0.672 0.207 43.125);
 
-  --color-muted: #f1f5f9;
-  --color-muted-foreground: #64748b;
+  --color-muted: oklch(0.968 0.007 247.896);
+  --color-muted-foreground: oklch(0.554 0.046 257.417);
 
-  --color-accent: #f1f5f9;
-  --color-accent-foreground: #0f172a;
+  --color-accent: oklch(0.968 0.007 247.896);
+  --color-accent-foreground: oklch(0.672 0.207 43.125);
 
-  --color-destructive: #ef4444;
-  --color-destructive-foreground: #f8fafc;
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.984 0.003 247.858);
 
-  --color-border: #e2e8f0;
-  --color-input: #e2e8f0;
-  --color-ring: #0f172a;
+  --color-border: oklch(0.929 0.013 255.508);
+  --color-input: oklch(0.929 0.013 255.508);
+  --color-ring: oklch(0.704 0.04 256.788);
 
-  --radius-lg: 0.5rem;
-  --radius-md: calc(0.5rem - 2px);
-  --radius-sm: calc(0.5rem - 4px);
+  --radius-lg: 0.625rem;
+  --radius-md: calc(0.625rem - 2px);
+  --radius-sm: calc(0.625rem - 4px);
 }
 
 @layer base {
@@ -40,37 +42,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: system-ui, -apple-system, sans-serif;
   }
-}
-
-.dark {
-  --color-background: #020617;
-  --color-foreground: #f8fafc;
-
-  --color-card: #020617;
-  --color-card-foreground: #f8fafc;
-
-  --color-popover: #020617;
-  --color-popover-foreground: #f8fafc;
-
-  --color-primary: #f8fafc;
-  --color-primary-foreground: #0f172a;
-
-  --color-secondary: #1e293b;
-  --color-secondary-foreground: #f8fafc;
-
-  --color-muted: #1e293b;
-  --color-muted-foreground: #94a3b8;
-
-  --color-accent: #1e293b;
-  --color-accent-foreground: #f8fafc;
-
-  --color-destructive: #7f1d1d;
-  --color-destructive-foreground: #f8fafc;
-
-  --color-border: #1e293b;
-  --color-input: #1e293b;
-  --color-ring: #cbd5e1;
 }
 
 @keyframes slideIn {
@@ -95,7 +68,7 @@
 
 .custom-toast-enter {
   animation: slideIn 0.4s ease-out;
-  @apply p-4 mb-2 max-w-md w-full bg-slate-800 text-white rounded-lg shadow-lg;
+  @apply p-4 mb-2 max-w-md w-full bg-white text-foreground rounded-lg shadow-xl border border-border;
 }
 
 .custom-toast-leave {

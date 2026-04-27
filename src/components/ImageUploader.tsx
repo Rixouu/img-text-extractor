@@ -10,7 +10,6 @@ import { ActionButtons } from './ActionButtons';
 import { useTesseractWorker } from '@/hooks/useTesseractWorker';
 import { useProgressSimulation } from '@/hooks/useProgressSimulation';
 import { resizeImage } from '@/utils/imageProcessing';
-import { ThemeToggle } from '@/components/theme-toggle';
 
 const ExtractedTextDisplay = dynamic(() => import('./ExtractedTextDisplay'), {
   loading: () => <p>Loading text display...</p>,
@@ -183,16 +182,15 @@ export function ImageUploader() {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col" role="region" aria-label="Image Text Extractor">
-      <div className="bg-gray-800 dark:bg-gray-950 p-6">
+    <div className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden flex flex-col" role="region" aria-label="Image Text Extractor">
+      <div className="p-8 pb-4">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-center text-white">Enhanced Image Text Extractor</h1>
-          <ThemeToggle />
+          <h1 className="text-4xl font-bold tracking-tight text-foreground">Image Text Extractor</h1>
         </div>
-        <p className="text-left text-gray-300 mt-2">Upload an image to extract text. Supports JPG, PNG, and GIF formats.</p>
+        <p className="text-muted-foreground mt-2 text-lg">Upload an image to extract text effortlessly.</p>
       </div>
 
-      <div className="p-6 flex-grow bg-white dark:bg-gray-900">
+      <div className="p-8 pt-4 flex-grow bg-white">
         <FileUploadArea onFileUpload={handleImageUpload} />
 
         {file && renderFilePreview()}

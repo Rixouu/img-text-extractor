@@ -7,48 +7,47 @@ interface ActionButtonsProps {
   onCopy: () => void;
   onDownload: () => void;
   onExtract: () => void;
-  // Remove the onSave property
 }
 
 export function ActionButtons({ onClear, onCopy, onDownload, onExtract }: ActionButtonsProps) {
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 p-4 flex items-center justify-between">
+    <div className="bg-muted/50 p-6 flex flex-col md:flex-row items-center justify-between gap-4">
       <Button
-        variant="outline"
+        variant="ghost"
         onClick={onClear}
-        className="bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 border-gray-300 dark:border-gray-600 hover:text-gray-900 dark:hover:text-white rounded-md transition-colors duration-200"
+        className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-xl transition-all duration-300"
         aria-label="Clear all content"
       >
         <Trash2 className="mr-2 h-4 w-4" aria-hidden="true" />
-        Clear
+        Clear everything
       </Button>
-      <div className="flex space-x-2">
+      <div className="flex flex-wrap justify-center gap-3 w-full md:w-auto">
         <Button
-          variant="outline"
+          variant="secondary"
           onClick={onCopy}
-          className="bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 border-gray-300 dark:border-gray-600 hover:text-gray-900 dark:hover:text-white rounded-md transition-colors duration-200"
+          className="rounded-xl font-medium px-6 py-5 h-auto transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
           aria-label="Copy extracted text"
         >
           <Copy className="mr-2 h-4 w-4" aria-hidden="true" />
-          Copy
+          Copy text
         </Button>
         <Button
-          variant="outline"
+          variant="secondary"
           onClick={onDownload}
-          className="bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 border-gray-300 dark:border-gray-600 hover:text-gray-900 dark:hover:text-white rounded-md transition-colors duration-200"
+          className="rounded-xl font-medium px-6 py-5 h-auto transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
           aria-label="Download extracted text"
         >
           <Download className="mr-2 h-4 w-4" aria-hidden="true" />
-          Download
+          Download .txt
         </Button>
         <Button
           variant="default"
-          className="bg-gray-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600 rounded-md transition-colors duration-200"
+          className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl font-bold px-8 py-5 h-auto transition-all duration-300 shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] ring-offset-background focus-visible:ring-2 focus-visible:ring-primary/50"
           onClick={onExtract}
           aria-label="Extract text from image"
         >
-          <Wand2 className="mr-2 h-4 w-4" aria-hidden="true" />
-          Extract Text
+          <Wand2 className="mr-2 h-5 w-5" aria-hidden="true" />
+          Extract Text Now
         </Button>
       </div>
     </div>

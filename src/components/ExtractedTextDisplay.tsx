@@ -18,9 +18,9 @@ export default function ExtractedTextDisplay({ extractedText, onTextChange }: Ex
   };
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 rounded-lg mb-4">
+    <div className="bg-muted/30 border border-border p-6 rounded-2xl mb-6 transition-all duration-300 focus-within:border-primary/50 focus-within:ring-4 focus-within:ring-primary/5">
       <textarea
-        className="bg-gray-50 dark:bg-gray-800 w-full h-32 resize-none focus:outline-none text-gray-800 dark:text-gray-200 font-medium"
+        className="bg-transparent w-full h-64 md:h-80 resize-none focus:outline-none text-foreground font-medium text-lg placeholder:text-muted-foreground/50"
         placeholder="Extracted text will appear here..."
         value={editableText}
         onChange={handleTextChange}

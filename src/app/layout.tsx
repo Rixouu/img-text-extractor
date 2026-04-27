@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import { PWARegistration } from "@/components/pwa-registration";
 
 export const metadata: Metadata = {
@@ -30,17 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <PWARegistration />
-          {children}
-        </ThemeProvider>
+        <PWARegistration />
+        {children}
       </body>
     </html>
   );
