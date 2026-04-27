@@ -231,7 +231,7 @@ export function ImageUploader() {
         </div>
       </div>
 
-      <div className="mt-4">
+      <div className="mt-8">
         <ActionButtons
           onClear={handleClear}
           onCopy={handleCopy}
