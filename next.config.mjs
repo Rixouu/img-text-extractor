@@ -4,6 +4,9 @@ const nextConfig = {
   experimental: {
     workerThreads: false,
     cpus: 1
+  },
+  turbopack: {
+    root: '/Users/cto/Documents/Repositories/02-Pro/image-text-extractor'
   }
 }
 

@@ -34,6 +34,18 @@
   --radius-lg: 1.5rem;
   --radius-md: calc(1.5rem - 2px);
   --radius-sm: calc(1.5rem - 4px);
+
+  @keyframes toast-slide-in {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes toast-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  --animate-toast-enter: toast-slide-in 0.4s ease-out;
+  --animate-toast-leave: toast-fade-out 0.3s ease-in forwards;
 }
 
 @layer base {

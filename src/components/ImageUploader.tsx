@@ -50,19 +50,12 @@ export function ImageUploader() {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(extractedText);
-    toast({
-      title: "Copied!",
-      description: "Text copied to clipboard",
-    });
+    showToast("Copied!", "Text copied to clipboard");
   };
 
   const handleDownload = () => {
     if (!extractedText) {
-      toast({
-        title: "No text to download",
-        description: "Please extract text from an image first",
-        variant: "destructive",
-      });
+      showToast("No text to download", "Please extract text from an image first", "destructive");
       return;
     }
     const blob = new Blob([extractedText], { type: "text/plain" });
@@ -72,11 +65,7 @@ export function ImageUploader() {
     a.download = "extracted_text.txt";
     a.click();
     URL.revokeObjectURL(url);
-    toast({
-      title: "Downloaded",
-      description: "Text file has been downloaded",
-      variant: "default",
-    });
+    showToast("Downloaded", "Text file has been downloaded");
   };
 
   const handleExtractText = async () => {
@@ -86,11 +75,7 @@ export function ImageUploader() {
     }
 
     if (!worker) {
-      toast({
-        title: "Initialization Error",
-        description: "Text recognition system is not ready. Please try again in a moment.",
-        variant: "destructive",
-      });
+      showToast("Initialization Error", "Text recognition system is not ready. Please try again in a moment.", "destructive");
       return;
     }
 
@@ -99,11 +84,7 @@ export function ImageUploader() {
     try {
       const text = await extractTextFromImage(file);
       setExtractedText(text);
-      toast({
-        title: "Text Extracted",
-        description: "The text has been successfully extracted from the image",
-        variant: "default",
-      });
+      showToast("Text Extracted", "The text has been successfully extracted from the image");
     } catch (error) {
       console.error('Error extracting text:', error);
       let errorMessage = "An unexpected error occurred while extracting text";
@@ -177,14 +158,14 @@ export function ImageUploader() {
     toast({
       title,
       description,
-      className: variant === "destructive" ? "bg-red-600" : "bg-gray-700",
+      variant,
     });
   };
 
   return (
-    <div className="bg-white rounded-[2.5rem] shadow-premium border border-border overflow-hidden flex flex-col p-8 md:p-12" role="region" aria-label="Image Text Extractor">
-      <div className="flex flex-col items-center mb-12 text-center">
-        <div className="w-24 h-24 bg-primary rounded-3xl flex items-center justify-center mb-8 shadow-xl shadow-primary/20 relative overflow-hidden p-4">
+    <div className="bg-white rounded-[2.5rem] shadow-premium border border-border overflow-hidden flex flex-col p-6 md:p-12" role="region" aria-label="Image Text Extractor">
+      <div className="flex flex-col items-center mb-8 md:mb-12 text-center">
+        <div className="w-20 h-20 md:w-24 md:h-24 bg-primary rounded-3xl flex items-center justify-center mb-6 md:mb-8 shadow-xl shadow-primary/20 relative overflow-hidden p-4">
           <Image
             src="/icon-img-extractor.png"
             alt="Icon"
@@ -193,8 +174,8 @@ export function ImageUploader() {
             className="object-contain"
           />
         </div>
-        <h1 className="text-4xl font-extrabold tracking-tight text-foreground mb-4">Image Text Extractor</h1>
-        <p className="text-muted-foreground text-lg max-w-md">Extract text from images effortlessly with our premium OCR tool.</p>
+        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-3 md:mb-4">Image Text Extractor</h1>
+        <p className="text-muted-foreground text-base md:text-lg max-w-md">Extract text from images effortlessly with our premium OCR tool.</p>
       </div>
 
       <div className="flex-grow space-y-8">
