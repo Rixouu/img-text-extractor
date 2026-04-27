@@ -12,7 +12,10 @@ export const metadata: Metadata = {
     title: "ImgExtractor",
   },
   icons: {
-    icon: "/favicon-196.png",
+    icon: [
+      { url: "/favicon-196.png" },
+      { url: "/favicon.ico" }
+    ],
     apple: "/apple-icon-180.png",
   },
   formatDetection: {
