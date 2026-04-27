@@ -1,0 +1,35 @@
+{
+  "name": "Image Text Extractor",
+  "short_name": "ImgExtractor",
+  "description": "Extract text from images with ease using OCR technology.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFC91E",
+  "theme_color": "#FFC91E",
+  "icons": [
+    {
+      "src": "/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,10 +1,27 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { PWARegistration } from "@/components/pwa-registration";
 
 export const metadata: Metadata = {
   title: "Image Text Extractor",
-  description: "Extract text from images",
+  description: "Extract text from images with ease using OCR technology.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "ImgExtractor",
+  },
+  icons: {
+    apple: "/apple-icon-180.png",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+};
+
+export const viewport = {
+  themeColor: "#FFC91E",
 };
 
 export default function RootLayout({
@@ -21,6 +38,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <PWARegistration />
           {children}
         </ThemeProvider>
       </body>

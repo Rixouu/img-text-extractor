@@ -1,85 +1,70 @@
-# Enhanced Image Text Extractor
+**Image Text Extractor** is a powerful web utility for extracting text from images using OCR technology. Built with Next.js and Tesseract.js, it offers a seamless drag-and-drop experience, real-time processing, and a modern, responsive UI.
 
-This is a [Next.js](https://nextjs.org) project that allows users to upload images and extract text from them using Tesseract.js. It features a modern, responsive design with dark mode support.
+The current product was developed by [Jonathan Rycx](https://github.com/Rixouu), focusing on clean design and efficient functionality.
 
-## Features
+[![Next.js 16](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
+[![React 19](https://img.shields.io/badge/React-19-blue)](https://react.dev/)
+[![Tailwind CSS 4](https://img.shields.io/badge/Tailwind-4-38bdf8)](https://tailwindcss.com/)
+[![Tesseract.js](https://img.shields.io/badge/Tesseract.js-OCR-red)](https://tesseract.projectnaptha.com/)
+![PWA Ready](https://img.shields.io/badge/PWA-Ready-yellow)
 
-- Drag and drop image upload
-- Support for JPG, PNG, GIF, and PDF formats
-- Image preview
-- Text extraction from images using Tesseract.js
-- Editable extracted text display
-- Copy, download, and clear functionality for extracted text
-- Responsive design with dark mode support
-- Progress indicator during text extraction
+### 📸 Capture & Extract
+- **Drag & Drop**: Effortlessly upload images via a responsive dropzone.
+- **OCR Processing**: High-accuracy text extraction powered by **Tesseract.js**.
+- **Real-time Feedback**: Visual progress bars and status updates during extraction.
+- **Copy to Clipboard**: One-click functionality to copy extracted text.
 
-## Technologies Used
+### 🎨 Modern UI/UX
+- **Shadcn UI**: Premium, accessible components built on Radix UI.
+- **Next Themes**: Seamless light and dark mode support.
+- **Responsive Design**: Optimized for desktop, tablet, and mobile browsers.
+- **Progressive Web App**: Installable on mobile and desktop for a native feel.
 
-- Next.js 14
-- React 18
-- TypeScript
-- Tailwind CSS
-- Tesseract.js
-- React Dropzone
-- Lucide React for icons
-- Shadcn UI components
+### 🛠️ Technical Stack
+- **Frontend**: Next.js 16 (App Router), React 19.
+- **Styling**: Tailwind CSS 4, CSS Variables.
+- **OCR Engine**: Tesseract.js.
+- **Components**: Radix UI, Lucide React, Shadcn UI.
 
-## Getting Started
+### 🚀 Getting Started
 
-First, clone the repository:
+#### Prerequisites
+- **Node.js 20+**
+- **npm** or **pnpm**
 
-bash
-git clone <https://github.com/Rixouu/img-text-extractor.git>
-cd img-text-extractor
-bash
+#### Installation
+```bash
 npm install
-or
-yarn install
-or
-pnpm install
+```
 
-Run the development server:
-
-bash
+#### Development
+```bash
 npm run dev
-or
-yarn dev
-or
-pnpm dev
+```
+Open [http://localhost:3000](http://localhost:3000) to see the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Build & Production
+```bash
+npm run build
+npm run start
+```
 
-## Usage
+### 📱 PWA Support
+- **Installable**: Add to home screen on iOS and Android.
+- **Offline Ready**: Basic service worker support for faster loading.
+- **Branded**: Custom icons and splash screens for a premium experience.
 
-1. Upload an image by dragging and dropping it into the designated area or clicking to select a file.
-2. Once an image is uploaded, click the "Extract Text" button to process the image.
-3. The extracted text will appear in an editable text area.
-4. Use the provided buttons to copy, download, or clear the extracted text.
-
-## Learn More
-
-To learn more about the technologies used in this project, check out the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Tesseract.js](https://tesseract.projectnaptha.com/) - learn about Tesseract.js OCR engine.
-- [Tailwind CSS](https://tailwindcss.com/docs) - learn about Tailwind CSS utility-first framework.
-- [TypeScript](https://www.typescriptlang.org/docs/) - learn about TypeScript.
-
-## Deployment
-
-This project can be easily deployed on [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), the platform from the creators of Next.js.
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Contributing
-
+### 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+### 👥 Team
+- **Jonathan Rycx** — Lead Developer — [Rixouu](https://github.com/Rixouu)
 
-This project is open source and available under the [MIT License](LICENSE).
+### 🙏 Acknowledgments
+- [Tesseract.js](https://tesseract.projectnaptha.com/) for the OCR engine.
+- [Shadcn](https://ui.shadcn.com/) for the beautiful UI components.
+- [Vercel](https://vercel.com/) for the hosting and Next.js framework.
 
-## Contact
+---
 
-Jonathan Rycx
-<https://www.linkedin.com/in/jonathanrycx/>
+**Built with ❤️ for efficient data extraction.**
