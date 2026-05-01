@@ -3,8 +3,8 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-12 lg:p-24 bg-background">
-      <div className="w-full max-w-3xl">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-[#EDE8E0] p-5 md:p-10">
+      <div className="w-full max-w-[1040px]">
         <ErrorBoundary fallback={<div className="text-foreground text-center">Something went wrong</div>}>
           <ClientPage />
         </ErrorBoundary>

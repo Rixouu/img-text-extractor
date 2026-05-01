@@ -18,3 +18,5 @@ declare module 'tesseract.js' {
 
     export function createWorker(options?: CreateWorkerOptions): Promise<Worker>;
 }
+
+declare module "pdfjs-dist/build/pdf.mjs";

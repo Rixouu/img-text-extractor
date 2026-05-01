@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 
 interface ExtractedTextDisplayProps {
   extractedText: string;
@@ -18,10 +18,10 @@ export default function ExtractedTextDisplay({ extractedText, onTextChange }: Ex
   };
 
   return (
-    <div className="bg-muted/30 border border-border p-4 md:p-6 rounded-2xl mb-6 transition-all duration-300 focus-within:border-primary/50 focus-within:ring-4 focus-within:ring-primary/5">
+    <div className="rounded-xl border border-[#EAE3D8] bg-white p-3 transition focus-within:ring-4 focus-within:ring-primary/25">
       <textarea
-        className="bg-transparent w-full h-64 md:h-80 resize-none focus:outline-none text-foreground font-medium text-lg placeholder:text-muted-foreground/50"
-        placeholder="Extracted text will appear here..."
+        className="min-h-[220px] w-full resize-none bg-transparent font-mono text-[12px] leading-6 text-[#6A5C48] placeholder:text-[#C0B098] focus:outline-none md:min-h-[230px]"
+        placeholder="Extracted text will appear here after processing your image…"
         value={editableText}
         onChange={handleTextChange}
         aria-label="Editable extracted text"

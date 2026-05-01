@@ -1,6 +1,7 @@
 export async function resizeImage(file: File, maxWidth = 1000, maxHeight = 1000): Promise<Blob> {
   return new Promise((resolve, reject) => {
     const img = new Image();
+    const objectUrl = URL.createObjectURL(file);
     img.onload = () => {
       const canvas = document.createElement('canvas');
       let width = img.width;
@@ -26,13 +27,18 @@ export async function resizeImage(file: File, maxWidth = 1000, maxHeight = 1000)
 
       canvas.toBlob((blob) => {
         if (blob) {
+          URL.revokeObjectURL(objectUrl);
           resolve(blob);
         } else {
+          URL.revokeObjectURL(objectUrl);
           reject(new Error('Canvas to Blob conversion failed'));
         }
       }, file.type);
     };
-    img.onerror = reject;
-    img.src = URL.createObjectURL(file);
+    img.onerror = () => {
+      URL.revokeObjectURL(objectUrl);
+      reject(new Error('Unsupported file type for image resizing'));
+    };
+    img.src = objectUrl;
   });
 }
